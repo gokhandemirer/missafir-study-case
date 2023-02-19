@@ -20,7 +20,7 @@ class ListingController extends AbstractController
         protected ListingRepository $listingRepository
     )
     {}
-    
+
     #[Route('/listing/search', name: 'listing_search', methods: ['POST'])]
     public function search(Request $request): JsonResponse
     {
