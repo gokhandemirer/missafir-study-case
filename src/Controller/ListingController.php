@@ -37,7 +37,7 @@ class ListingController extends AbstractController
         } catch (JsonException $e) {
             return $this->json([
                 'message' => $e->getMessage()
-            ], $e->getCode());
+            ], 400);
         } catch (SearchRequestMissingParameterException $e) {
             return $this->json([
                 'message' => $e->getMessage(),
