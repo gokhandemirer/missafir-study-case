@@ -15,8 +15,8 @@ class ReservationFixtures extends Fixture
 
         for ($i = 0; $i < 10; $i++) {
             $reservation = new Reservation();
-            $reservation->setStartDate($faker->dateTimeThisMonth);
-            $reservation->setEndDate($faker->dateTimeThisMonth);
+            $reservation->setStartDate($faker->dateTimeBetween('-5 weeks', '-3 weeks'));
+            $reservation->setEndDate($faker->dateTimeBetween('-3 weeks'));
             $reservation->setListing($this->getReference(ListingFixtures::LISTING_REFERENCE . '-' . rand(0, 3)));
             $manager->persist($reservation);
         }
