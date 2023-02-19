@@ -49,4 +49,20 @@ class ListingController extends AbstractController
             ], 400);
         }
     }
+
+    #[Route('/listing/detail/{id}', name: 'listing_detail', methods: ['GET'])]
+    public function detail($id): JsonResponse
+    {
+        $listing = $this->listingRepository->findOneBy(['id' => $id]);
+
+        if (empty($listing)) {
+            return $this->json([
+                'message'   =>  'Listing not found!'
+            ], 404);
+        }
+
+        return $this->json([
+            'listing' => $listing->toArray()
+        ]);
+    }
 }
