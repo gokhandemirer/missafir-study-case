@@ -15,4 +15,5 @@ intl \
 opcache \
 pdo \
 pdo_mysql \
-&& a2enmod rewrite && service apache2 restart
+&& a2enmod rewrite && service apache2 restart \
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
