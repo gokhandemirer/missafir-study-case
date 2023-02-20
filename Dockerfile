@@ -9,6 +9,7 @@ libcurl4-openssl-dev \
 pkg-config \
 libssl-dev \
 zip \
+unzip \
 zlib1g-dev \
 && docker-php-ext-install \
 intl \
