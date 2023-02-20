@@ -5,8 +5,6 @@
 </ul>
 
 <h3>Projenin Çalıştırılması</h3>
-Son olarak projeyi ayağa kaldırabilmek için,
-eğer Symfony CLI kullanıyorsanız aşağıdaki komutu çalıştırarak projeyi ayağa kaldırabilirsiniz.
 <pre>
 docker compose build
 docker compose up -d
