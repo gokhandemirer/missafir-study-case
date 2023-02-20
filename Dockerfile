@@ -16,5 +16,5 @@ intl \
 opcache \
 pdo \
 pdo_mysql \
-&& a2enmod rewrite && service apache2 restart \
+&& a2enmod rewrite && service apache2 restart
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
