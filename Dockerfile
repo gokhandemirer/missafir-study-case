@@ -16,4 +16,4 @@ opcache \
 pdo \
 pdo_mysql \
 && a2enmod rewrite && service apache2 restart \
-COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
